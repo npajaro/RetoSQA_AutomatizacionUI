@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Search and purchase a book on the website","Purchase a book","SUCCESS","2023-03-24T00:44:27.226-05:00[America/Bogota]","0.0","70.22"
+"Login","Successful login","SUCCESS","2023-03-24T00:45:39.563-05:00[America/Bogota]","0.0","12.34"
+"Login","Unsuccessful login","SUCCESS","2023-03-24T00:45:52.573-05:00[America/Bogota]","0.0","13.32"
+"Registration in Librería Nacional","Failed registration","SUCCESS","2023-03-24T00:46:06.768-05:00[America/Bogota]","0.0","12.32"

@@ -1,0 +1,49 @@
+apply plugin: 'java-library'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'com.libreria.nacional'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.80")
+    }
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit
+    implementation 'net.serenity-bdd:serenity-junit:2.0.80'
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
+    testImplementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
+// https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
+    implementation 'net.serenity-bdd:serenity-core:2.0.80'
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    testImplementation 'org.slf4j:slf4j-simple:1.7.7'
+// https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation 'com.google.guava:guava:23.0'
+// https://mvnrepository.com/artifact/org.apache.poi/poi
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+}
+
+test {
+    ignoreFailures = true
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
